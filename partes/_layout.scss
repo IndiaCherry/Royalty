@@ -1,0 +1,258 @@
+
+.container{
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 8px;
+}
+// Tela inicial foto //
+.bg-home{
+    position:relative;
+}
+
+.bg-home::before{
+    content: '';
+    display: block;
+    position: absolute;
+    background-image: linear-gradient(to bottom,rgba(6, 18, 30, 0.1),  #081320), url("../imagens/fundo.svg");
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    opacity: 0.9;
+}
+//---------------------------------//
+
+// hero informações inicial //
+
+.hero{
+    color: $branco-normal;
+    min-height: 80vh;
+
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    padding: 14px;
+
+    h1{
+        text-align: center;
+        line-height: 150%;
+        max-width: 940px;
+        font-size: 48px;
+
+    }
+    p{
+        text-align: center;
+        margin: 14px 0;
+        font-size: 20px;
+    }
+}
+
+.button-contact{
+    padding: 14px 28px;
+    color: $branco-normal;
+    background-color: $amarelo-botao;
+    border: 0;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 14px 0;
+}
+
+.button-contact:hover{
+    animation: scaleButton 0.8s alternate infinite;
+}
+
+@keyframes scaleButton {
+    from{
+       transform: scale(1);
+    }
+    to{
+       transform: scale(1.07);
+    }
+}
+
+@media screen and (max-width:657px) {
+    .hero{
+        min-height: 60vh;
+
+        h1{
+            font-size: 34px;
+            padding: 0 14px;
+            width: 100%;
+        }
+
+        p{
+            font-size: 15px;
+            padding: 0 20px;
+        }
+    }
+}
+
+@media screen and (max-width:480px){
+ .hero{
+        h1{
+            font-size: 28px;
+        }
+}
+}
+// -----------------------------------------//
+
+// about  //
+
+.about{
+    background-color: $preto-fundo;
+    overflow: hidden;
+    color: $branco-normal;
+}
+
+.about-conteudo {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    padding: 34px 14px 64px 14px;
+
+   img{
+    max-width: 570px;
+   }
+}
+
+.about-conteudo div{
+   flex: 1;
+}
+
+.about-description{
+    h2{
+        font-size: 38px;
+        margin-bottom: 24px;
+    }
+    p{
+        font-size: 20px;
+        margin-bottom: 14px;
+        line-height: 150%;
+    }
+}
+
+@media screen and (max-width:657px){
+    .about-conteudo{
+        flex-direction: column;
+    }
+}
+
+//-----------------------------------//
+
+// services //
+
+.services{
+    background: linear-gradient(to bottom, $preto-fundo, $preto-fundo, $amarelo-light);
+    color: $branco-normal;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 54px 14px;
+}
+
+.services-conteudo h2{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 38px;
+    margin-bottom: 14px;
+}
+.services-conteudo h1{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 14px;
+
+}
+
+.services-conteudo p{
+    font-size: 18px;
+    line-height: 150%;
+    margin-bottom: 14px;
+    text-align: center;
+    max-width: 750px;
+}
+
+.regras{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    padding: 0 44px 34px 44px;
+    
+}
+
+.regra{
+    flex: 1;
+    display: flex;  
+    flex-direction: column;
+    background-color: $preto-fundo;
+    border-radius: 8px;
+    box-shadow: 0px -1px 17px -4px rgba(0, 0, 0, 0.45);
+
+    overflow: hidden;
+
+    img{
+        width: 100%;
+        max-width: 100%;
+        transition: transform 0.2s;
+    }
+}
+
+.regras img:hover{
+    transform: scale(1.2);
+    z-index: 1;
+
+}
+
+.regras-info{
+    width: 100%;
+    display: flex;
+    font-size: 20px;
+    justify-content: space-between;
+    padding: 14px;
+    background-color: $preto-fundo;
+    z-index: 99;
+}
+
+.regras-info button{
+    color: $branco-normal;
+    background-color: $preto-fundo;
+    padding: 4px 0px;
+    border: 0;
+    cursor: default;
+}
+
+@media screen and (max-width:657px){
+    .regras{
+        flex-direction: column;
+    }
+
+    .regras img{
+        max-width: 740px;
+    }
+}
+
+//---------------------------------------------------
+
+// footer //
+
+.footer{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-items: center;
+    padding:3px 0;
+    gap:25px;
+    text-align: center;
+
+    p{
+        color: $branco-normal;
+    }
+}
